@@ -32,7 +32,7 @@ documenten worden beschreven:
 Onderstaande tabel geeft de doelgroep van dit document weer.
 
 | Afkorting | Rol                             | Taak                                                                                                       | Doelgroep? |
-|-----------|---------------------------------|------------------------------------------------------------------------------------------------------------|------------|
+|---|---|---|---|
 | [MT]      | Management                      | Bevoegdheid om namens organisatie (strategische) besluiten te nemen.                                       | **Nee**    |
 | [PL]      | Projectleiding                  | Verzorgen van de aansturing van projecten.                                                                 | **Nee**    |
 | [A&D]     | Analyseren & ontwerpen (design) | Analyseren en ontwerpen van oplossings-richtingen. Het verbinden van Business aan de IT.                   | **Ja**     |
@@ -66,8 +66,8 @@ identiteit moet geverifieerd worden (authenticatie) bij de aanbieder.
 
 NORA principe AP37 stelt:
 
-| **ID**        | AP37<sup>1</sup>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ID        | AP37<sup>1</sup>|
+|---|---|
 | **Stelling**  | Dienstverlener en afnemer zijn geauthenticeerd wanneer de dienst een vertrouwelijk karakter heeft                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | **Rationale** | Afnemer en dienstverlener willen beide de zekerheid dat misbruik van gegevens en van diensten voorkomen wordt. Aan vertrouwelijke diensten of diensten met rechtsconsequenties, worden daarom strikte identificatie-eisen gesteld. In deze gevallen worden diensten alleen verleend aan geauthenticeerde afnemers. Ook medewerkers van de dienstverlener zijn geauthenticeerd en geautoriseerd om van de voorzieningen die de dienst ondersteunen, gebruik te kunnen maken. Er zijn natuurlijk ook diensten die geen vertrouwelijk karakter hebben en daarom aan veel minder strikte identificatie-eisen worden onderworpen. Een persoon is geauthenticeerd als de identiteit eenduidig is vastgesteld op basis van een geverifieerde unieke codering. Voor authenticatie van rechtspersonen wordt het RSIN (Rechtspersonen en Samenwerkingsverbanden Informatie Nummer) gebruikt, voor natuurlijke personen het Burgerservicenummer (BSN). |
 
@@ -314,7 +314,7 @@ onderverdelingen, zoals medewerker afdeling, systeem, enzovoort bij de
 Conclusie:
 
 | De vastlegging van de gebeurtenis van afnemen gebeurt door de aanbieder op het niveau van afnemerorganisatie. Het is niet nodig en niet gewenst om dat te doen op een niveau binnen die afnemer zoals medewerker afdeling, systeem of wettelijke taak. |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|---|
 
 Gevolg van dit uitgangspunt is, dat een verantwoordelijke alleen maar inzage kan
 geven in de organisaties aan wie gegevens zijn verstrekt. Die andere organisatie
@@ -553,17 +553,17 @@ inclusief de prefix en suffix en daarbij behorende voorloopnullen. Door het
 gehele nummer te gebruiken wordt zeker gesteld dat het nummer uniek is.
 
 | Prefix   | Identificerend nummer                   | Bron                                                                                                                                                       |
-|----------|-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 00000001 | RSIN                                    | Handelsregister                                                                                                                                            |
-| 00000002 | Fi-nummer                               | Het fiscaal nummer wordt verstrekt door de Belastingdienst aan de organisatie zelf<sup>10</sup> (alleen voor organisaties die niet in het Handelsregister staan).  |
-| 00000003 | KvK nummer                              | Handelsregister<sup>11</sup>                                                                                                                                       |
-| 00000004 | subnummer                               | subOIN register                                                                                                                                            |
-| 00000005 | Onderdelen van de Staat der Nederlanden | nog aan te wijzen                                                                                                                                          |
-| 00000006 | Onderdelen van het Rijk                 | nog aan te wijzen                                                                                                                                          |
-| 00000007 | BRIN nummer                             | De Basisregistratie Instellingen (BRIN) is een register van onderwijsinstellingen dat door DUO wordt beheerd in opdracht van het Ministerie van OCW.       |
-| 00000008 | Buitenlandse nummers                    | Buitenlandse nummers                                                                                                                                       |
-| 00000009 | Nog niet in gebruik                     |                                                                                                                                                            |
-| 00000099 | Test OIN’s                              | Elke organisatie mag een test OIN gebruiken mits voorzien van deze prefix.                                                                                 |
+|---|---|---|
+| **00000001** | RSIN                                    | Handelsregister                                                                                                                                            |
+| **00000002** | Fi-nummer                               | Het fiscaal nummer wordt verstrekt door de Belastingdienst aan de organisatie zelf<sup>10</sup> (alleen voor organisaties die niet in het Handelsregister staan).  |
+| **00000003** | KvK nummer                              | Handelsregister<sup>11</sup>                                                                                                                                       |
+| **00000004** | subnummer                               | subOIN register                                                                                                                                            |
+| **00000005** | Onderdelen van de Staat der Nederlanden | nog aan te wijzen                                                                                                                                          |
+| **00000006** | Onderdelen van het Rijk                 | nog aan te wijzen                                                                                                                                          |
+| **00000007** | BRIN nummer                             | De Basisregistratie Instellingen (BRIN) is een register van onderwijsinstellingen dat door DUO wordt beheerd in opdracht van het Ministerie van OCW.       |
+|**00000008** | Buitenlandse nummers                    | Buitenlandse nummers                                                                                                                                       |
+| **00000009** | UZI-nummer| Het Unieke Zorgverlener Identificatie Register (UZI-register) is de organisatie die de unieke identificatie van zorgaanbieders en indicatieorganen in het elektronisch verkeer mogelijk maakt.|
+| **00000099** | Test OIN’s                              | Elke organisatie mag een test OIN gebruiken mits voorzien van deze prefix.                                                                                 |
 
 <sup>10</sup>: In uitzonderlijke gevallen kan het Fi-nummer worden gebruikt indien
     verstrekt door de organisatie zelf. Dit is b.v. het geval bij onderdelen van
@@ -597,11 +597,11 @@ De opbouw van het HRN (Handels Register Nummer) is identiek aan het OIN:
 Voor het HRN worden tot nog toe alleen onderstaande mogelijkheden onderkend.
 
 | **Prefix**           | **Nummer**                      | **Suffix**                     |
-|----------------------|---------------------------------|--------------------------------|
-| 00000001             | RSIN uit HR (9 posities)        | “000”                          |
-| 00000003             | KvK nummer uit NHR (8 posities) | Volgnummer “0000” (4 posities) |
-| 00000002 en 00000004 | Niet gebruikt.                  |                                |
-| vanaf 00000005       | Niet gebruikt.                  |                                |
+|---|---|---|
+| **00000001**             | RSIN uit HR (9 posities)        | “000”                          |
+| **00000003**             | KvK nummer uit NHR (8 posities) | Volgnummer “0000” (4 posities) |
+| **00000002** en **00000004** | Niet gebruikt.                  |                                |
+| vanaf **00000005**       | Niet gebruikt.                  |                                |
 
 In de HRN-variant worden de nummers vastgesteld door de TSP, op basis van het
 door de aanvrager opgegeven KvK-nummer, dat door de TSP wordt gecontroleerd.
