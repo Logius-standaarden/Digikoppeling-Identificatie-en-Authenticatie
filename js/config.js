@@ -10,8 +10,8 @@ var respecConfig = {
   // EO: Einde ondersteuning, verouderde versie, vervangen door nieuwe versie
   // TG: Versie teruggetrokken
   // BASIS, GN-BASIS: 'geen status'
+  specStatus: "DEF",
 
-  specStatus: "WV",
   // SpecType currently supported
   // NO: "Norm"
   // ST: "Standaard"
@@ -22,21 +22,21 @@ var respecConfig = {
   // AL: "Algemeen"
   // BD: "Beheerdocumentatie"
   // BP: "Best Practice"
-  specType: "HR",
+  specType: "ST",
 
   // subtitle will be shown below title, can be omitted 
   subtitle: "Hier komt een subtitle",
 
   // The specification's "short name", which is the name used in NL_Respec URLs
-  shortName: "API-Design-Rules",
+  shortName: "digikoppeling",
 
   // A YYYY-MM-DD date. The publication date of the present document. 
   // Als er geen publishDate is opgegeven, genereert ReSpec de dataum o.b.v. de laatste wijzigingen
   // Belangrijk: als publishDate niet opgegeven is, wordt bij de link "Laatst gepubliceerde versie" "geen" gezet. Anders wordt een link opgebouwd voor de laatste versie, met het formaat:
-  publishDate: "2021-01-31",
+  publishDate: "2017-10-01",
 
   // A YYYY-MM-DD date. When there is a previous release of a given specification, (W3C)
-  previousPublishDate: "2021-01-31",
+  //previousPublishDate: "2021-01-31",
 
   // Zie https://github.com/w3c/respec/wiki/previousMaturity. Dit moet een
   // A YYYY-MM-DD date. When a previousPublishDate is specified, this is typically required as well in order to generate the "Previous Version"
@@ -73,7 +73,7 @@ var respecConfig = {
   }
   ],
   // The github option allows you associate your specification with a repository on GitHub.
-  github: "https://github.com/Logius-standaarden/Template-Repository",
+  github: "https://github.com/Logius-standaarden/Digikoppeling-Identifcatie-en-Authenticatie",
 
   // The URL of your test suite, gets included in the specification's headers.
   // testSuiteURI: "https://portaal.digikoppeling.nl/CV/home.html",
@@ -116,15 +116,15 @@ var respecConfig = {
 
   // if you use a single document for your spec, which uses more than one markdown H1 header, e.g. '# inleiding'
   // this configuration can be set to make sure that the alle H1 headers and navigation bars are preserved
-  nl_markdownSplitH1sections: false,
+  nl_markdownSplitH1sections: true,
 
   // in some cases the Repository of a Specification document and the Issue- and PR bases are split
   // thi scan be configured below
   // if not set, the url's will be generated on the respecConfig.github automatically  
   nl_github: {
-    issueBase: "https://github.com/Geonovum/KP-APIs/issues",
-    revision: "https://github.com/Logius-standaarden/API-Design-Rules/commits",
-    pullrequests: "https://github.com/Logius-standaarden/API-Design-Rules/pulls"
+    //issueBase: "https://github.com/Logius-standaarden/Digikoppeling-Identifcatie-en-Authenticatie/issues",
+    revision: "https://github.com/Logius-standaarden/Digikoppeling-Identifcatie-en-Authenticatie/commits",
+    //pullrequests: "https://github.com/Logius-standaarden/Digikoppeling-Identifcatie-en-Authenticatie/pulls"
   },
 
   // nl_organisationName is used for some company specific values in the header (and Sotd)
@@ -182,24 +182,15 @@ var respecConfig = {
       date: "december 2020",
       publisher: "Logius",
     },
-    UMMR10: {
-      href: "https://unece.org/DAM/cefact/umm/UMM_Revision_10_2001.zip",
-      title: "UMM Revision 10",
-      authors: [""],
-      date: "2001",
-      publisher: "UN/CEFACT",
-    },
-    UMMUG: {
-      href: "www.unece.org/fileadmin/DAM/cefact/umm/UMM_userguide_220606.pdf",
-      title: "UN/CEFACT Modeling Methodology (UMM) User Guide",
-      authors: [""],
-      date: "2003",
-      publisher: "UN/CEFACT",
-    },
     "Digikoppeling Beveiligingsdocument": {
       href: "https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf",
       title: "Digikoppeling Beveiligingsstandaarden en voorschriften",
       date: "2020",
+      publisher: "Logius",
+    },
+    "Digikoppeling-Cert": {
+      href: "http://www.logius.nl/digikoppeling",
+      title: "Gebruik en achtergrond van Digikoppeling certificaten",
       publisher: "Logius",
     },
     "PKI Policy": {
@@ -212,6 +203,21 @@ var respecConfig = {
       title: "Toegetreden vertrouwensdienstverleners",
       publisher: "Logius",
     },
+    "PKIoverheid Certificaten": {
+      href: "https://cert.pkioverheid.nl/",
+      title: "Pkioverheid certificaten",
+      publisher: "Logius"
+    },
+    "Logius website": {
+      href: "https://logius.nl/digikoppeling",
+      title: "Logius Digikoppeling",
+      publisher: "Logius",
+    },
+    "Digikoppeling Compliance Voorziening": {
+      href: "https://portaal.digikoppeling.nl",
+      title: "Digikoppeling Compliance Voorziening",
+      publisher: "Logius",
+    }
 
   }
 };
