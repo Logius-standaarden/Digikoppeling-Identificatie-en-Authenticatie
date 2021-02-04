@@ -1,3 +1,4 @@
-# Template-Standaard
+# Digikoppeling Identificatie en Authenticatie
 
-https://logius-standaarden.github.io/Template-Repository/
+- html: https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie/
+- markdown: [04_content.md](04_content.md)/
