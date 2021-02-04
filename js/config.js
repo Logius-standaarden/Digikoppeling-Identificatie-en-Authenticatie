@@ -73,7 +73,7 @@ var respecConfig = {
   }
   ],
   // The github option allows you associate your specification with a repository on GitHub.
-  github: "https://github.com/Logius-standaarden/Digikoppeling-Identifcatie-en-Authenticatie",
+  github: "https://github.com/Logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie",
 
   // The URL of your test suite, gets included in the specification's headers.
   // testSuiteURI: "https://portaal.digikoppeling.nl/CV/home.html",
@@ -117,7 +117,7 @@ var respecConfig = {
   // this parameter will add the tag_name of the latest release to the document Title
   // only set this parameter when a release has been set
   nl_addReleaseTagTitle: true,
-  
+
   // if you use a single document for your spec, which uses more than one markdown H1 header, e.g. '# inleiding'
   // this configuration can be set to make sure that the alle H1 headers and navigation bars are preserved
   nl_markdownSplitH1sections: true,
