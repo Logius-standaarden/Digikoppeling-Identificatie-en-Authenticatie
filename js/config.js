@@ -24,11 +24,14 @@ var respecConfig = {
   // BP: "Best Practice"
   specType: "ST",
 
+
+  // The specification's publish domain, which is used to publish the specification
+  // the url in the header thisVersion is generated like `<conf.nl_organisationPublishURL>/<conf.pubDomain>/<specStatus>-<specType.toLowerCase()>-<conf.shortName>}-conf.publishDate>/`
+  pubDomain: "dk",
+  shortname: "idauth",
+
   // subtitle will be shown below title, can be omitted 
   //subtitle: "Hier komt een subtitle",
-
-  // The specification's "short name", which is the name used in NL_Respec URLs
-  shortName: "idauth",
 
   // A YYYY-MM-DD date. The publication date of the present document. 
   // Als er geen publishDate is opgegeven, genereert ReSpec de dataum o.b.v. de laatste wijzigingen
@@ -41,6 +44,9 @@ var respecConfig = {
   // Zie https://github.com/w3c/respec/wiki/previousMaturity. Dit moet een
   // A YYYY-MM-DD date. When a previousPublishDate is specified, this is typically required as well in order to generate the "Previous Version"
   //previousMaturity: "WV",
+
+  publishVersion: "1.4.1",
+  // previousPublishVersion: "1.4",
 
   // license can be one of the following: cc0, cc-by or cc-by-nd((default)) (see https://github.com/Geonovum/respec/wiki/license )
   license: 'cc-by-nd',
@@ -101,16 +107,13 @@ var respecConfig = {
   //   },
   // ],
 
-  // You can use markdown to write ReSpec based documents.
-  // format: "markdown",
-  // TODO  Do not suse this config, it may cause a problem., use instead:
-  // <section data-format="markdown" data-include="<filename>.md"></section>
+  alternateFormats: [
+    {
+      label: "pdf",
+      uri: "Digikoppeling-Identificatie-en-Authenticatie.pdf",
+        },
+  ],
 
-
-  // The specification's publish domain, which is used to publish the specification
-  // the url in the header thisVersion is generated like `<conf.nl_organisationPublishURL>/<conf.pubDomain>/<specStatus>-<specType.toLowerCase()>-<conf.shortName>}-conf.publishDate>/`
-  pubDomain: "dk",
-  pubSubDomain: "idauth",
 
   // For Consultatieversies (specStatus="GN-CV") there is a default text in the section "Status of this document" that contains an emailaddress for feedback and comments on the document.
   nl_emailComments: "digikoppeling@logius.nl",
