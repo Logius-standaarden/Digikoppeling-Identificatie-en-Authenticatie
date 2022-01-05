@@ -51,7 +51,7 @@ gaat in op de vraag hoe de (nummer)identiteit vorm krijgt.
 
 Dit document is een onderdeel van de Digikoppeling standaarden:
 
-![Opbouw documentatie Digikoppeling](media/DK_Specificatie_structuur.svg "Opbouw documentatie Digikoppeling")
+![Overzicht van de onderdelen van de Digikoppeling Standaard, de standaard is onderverdeeld in normatieve en ondersteunende onderdelen](media/DK_Specificatie_structuur.svg "Opbouw documentatie Digikoppeling")
 
 # Probleemstelling
 
