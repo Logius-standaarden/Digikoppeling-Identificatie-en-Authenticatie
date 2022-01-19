@@ -1,3 +1,5 @@
+![build](https://github.com/Logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie/actions/workflows/build.yml/badge.svg)
+
 # Digikoppeling Identificatie en Authenticatie
 
 - html: https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie/
