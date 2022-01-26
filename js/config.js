@@ -45,8 +45,8 @@ var respecConfig = {
   // A YYYY-MM-DD date. When a previousPublishDate is specified, this is typically required as well in order to generate the "Previous Version"
   //previousMaturity: "WV",
 
-  publishVersion: "1.4.1",
-  // previousPublishVersion: "1.4",
+  publishVersion: "1.4.2",
+  previousPublishVersion: "1.4.1",
 
   // license can be one of the following: cc0, cc-by or cc-by-nd((default)) (see https://github.com/Geonovum/respec/wiki/license )
   license: 'cc-by-nd',
