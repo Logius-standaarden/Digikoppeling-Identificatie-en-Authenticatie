@@ -30,7 +30,7 @@ Een aangesloten overheidsregister krijgt een prefix (per uniek nummer) als het r
 
 | **Prefix** | **Identificerend nummer** | **Bron**|
 |------------|-----------------------------------------|---|
-| **00000001** | SIN| Handelsregister |
+| **00000001** | RSIN| Handelsregister |
 | **00000002** | Fi-nummer | Het fiscaal nummer wordt verstrekt door de Belastingdienst aan de organisatie zelf<sup>10</sup>. Het Fi-nummer kan worden gebruikt in het het geval voor onderdelen van de Staat der Nederlanden die niet ingeschreven in het Handelsregister zoals de Tweede Kamer der Staten-Generaal of de Algemene Rekenkamer. Het FI-nummer wordt verstrekt door de organisatie zelf |
 | **00000003** | KvKnummer| Handelsregister<sup>11</sup>. Het KvKnummer wordt gebruikt door private partijen in de communicatie met de overheid. |
 | **00000004** | subnummer | SubOIN register |
