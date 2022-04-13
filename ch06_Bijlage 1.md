@@ -21,18 +21,26 @@ De waarde van het OIN in het OIN Register en in het veld subject.serialNumber is
 inclusief de prefix en suffix en daarbij behorende voorloopnullen. Door het
 gehele nummer te gebruiken wordt zeker gesteld dat het nummer uniek is.
 
-| Prefix   | Identificerend nummer                   | Bron                                                                                                                                                       |
-|---|---|---|
-| **00000001** | RSIN                                    | Handelsregister                                                                                                                                            |
-| **00000002** | Fi-nummer                               | Het fiscaal nummer wordt verstrekt door de Belastingdienst aan de organisatie zelf<sup>10</sup> (alleen voor organisaties die niet in het Handelsregister staan).  |
-| **00000003** | KvK nummer                              | Handelsregister<sup>11</sup>                                                                                                                                       |
-| **00000004** | subnummer                               | subOIN register                                                                                                                                            |
-| **00000005** | Onderdelen van de Staat der Nederlanden | nog aan te wijzen                                                                                                                                          |
-| **00000006** | Onderdelen van het Rijk                 | nog aan te wijzen                                                                                                                                          |
-| **00000007** | BRIN nummer                             | De Basisregistratie Instellingen (BRIN) is een register van onderwijsinstellingen dat door DUO wordt beheerd in opdracht van het Ministerie van OCW.       |
-|**00000008** | Buitenlandse nummers                    | Buitenlandse nummers                                                                                                                                       |
+
+## Prefix tabel
+
+Een aangesloten overheidsregister krijgt een prefix (per uniek nummer) als het register wordt toegevoegd aan het OIN-stelsel. Dit wordt ook een OIN register genoemd. De prefix tabel wordt als aparte lijst beheerd door de beheerder van het OIN-stelsel en wordt gepubliceerd op de website.
+
+
+
+| **Prefix** | **Identificerend nummer** | **Bron**|
+|------------|-----------------------------------------|---|
+| **00000001** | RSIN| Handelsregister |
+| **00000002** | Fi-nummer | Het fiscaal nummer wordt verstrekt door de Belastingdienst aan de organisatie zelf<sup>10</sup>. Het Fi-nummer kan worden gebruikt in het het geval voor onderdelen van de Staat der Nederlanden die niet ingeschreven in het Handelsregister zoals de Tweede Kamer der Staten-Generaal of de Algemene Rekenkamer. Het FI-nummer wordt verstrekt door de organisatie zelf |
+| **00000003** | KvKnummer| Handelsregister<sup>11</sup>. Het KvKnummer wordt gebruikt door private partijen in de communicatie met de overheid. |
+| **00000004** | subnummer | SubOIN register |
+| **00000005** | vrij | nog aan te wijzen |
+| **00000006** | Logius OIN Hoofdnummer | Door Logius uitgegeven OIN Hoofdnummers aan organisaties die in aanmerking komen voor een OIN maar waarvoor geen geschikt nummer uit de overige prefix categorieën beschikbaar is<sup>12</sup>.  |
+| **00000007** | BRIN nummer | De Basisregistratie Instellingen (BRIN) is een register van onderwijsinstellingen dat door DUO wordt beheerd in opdracht van het Ministerie van OCW.|
+| **00000008** | Buitenlandse nummers| Op verzoek van een SubOIN-beheerder door Logius uitgegeven nummers voor buitenlandse organisaties die niet in het Handelsregister zijn ingeschreven|
 | **00000009** | UZI-nummer| Het Unieke Zorgverlener Identificatie Register (UZI-register) is de organisatie die de unieke identificatie van zorgaanbieders en indicatieorganen in het elektronisch verkeer mogelijk maakt.|
-| **00000099** | Test OIN’s                              | Elke organisatie mag een test OIN gebruiken mits voorzien van deze prefix.                                                                                 |
+| **00000099** | Test OIN's| Elke organisatie mag een test OIN gebruiken mits voorzien van deze prefix.|
+
 
 <sup>10</sup>: In uitzonderlijke gevallen kan het Fi-nummer worden gebruikt indien
     verstrekt door de organisatie zelf. Dit is b.v. het geval bij onderdelen van
@@ -47,6 +55,10 @@ gehele nummer te gebruiken wordt zeker gesteld dat het nummer uniek is.
 
 - Het KvK-nummer kan in het Handelsregister van de KvK na opgave door de
     aanvrager gecontroleerd worden door Logius.
+
+
+ <sup>12</sup>:  Logius OIN Hoofdnummer: Voor organisaties uit het caribisch deel van het Koninkrijk der Nederlanden is dit nummer opgebouwd als 4 posities landnummer gevolgd door 5 posities volgnummer, conform landentabel BRP.
+
 
 Voorbeelden:
 

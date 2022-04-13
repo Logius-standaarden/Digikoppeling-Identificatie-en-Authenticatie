@@ -104,6 +104,6 @@ Rechtspersoonlijkheid) eenvoudig een subOIN aanvragen voor
 Met nadruk stellen we dat deze mogelijkheid facultatief. Ook is duidelijk
 gemaakt hoe en wanneer organisaties een OIN kunnen krijgen als ze niet aan een
 van hierboven gestelde eisen kunnen doen, zoals buitenlandse partijen of
-organisaties uit het onderwijs. In de Digikoppeling Voorwaarden[] worden de
+organisaties uit het onderwijs. In de Digikoppeling Voorwaarden worden de
 voorwaarden voor uitgifte en gebruik van het OIN exact beschreven.
 
