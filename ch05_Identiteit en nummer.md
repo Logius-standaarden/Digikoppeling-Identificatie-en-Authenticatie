@@ -65,7 +65,7 @@ Het beleid voor de utgifte van een OIN wordt gebaseerd op het bovenstaande:
     en gebruikt kan worden.
 - ofwel een nieuw nummer voor de overige organisaties. Dat nieuwe nummer wordt
     indien mogelijk gebaseerd op een KvK nummer.
-- ofwel het OIN wordt uitgereikt door Logius als beheerdervan Digikoppeling
+- ofwel het OIN wordt uitgereikt door Logius als beheerder van Digikoppeling
      wanneer noch een RSIN, noch een KvK nummer beschikbaar is.
 
 Verder:
