@@ -66,7 +66,7 @@ enzovoort), bijbehorende maatregelen moeten treffen en daar controleerbaar
 verantwoording over moeten afleggen.
 
 Alle overheidsorganisaties hebben al een dergelijke verplichting in het kader
-van persoonsgegevens, in relatie tot de Wet Bescherming Persoonsgegevens (WBP).
+van persoonsgegevens, in relatie tot de Algemene Verordening Gegevensbescherming (AVG).
 
 Een belangrijk deel van de verantwoordelijkheid voor informatiebeveiliging komt
 te liggen bij de afnemerorganisatie. Die dient ervoor zorg te dragen, dat

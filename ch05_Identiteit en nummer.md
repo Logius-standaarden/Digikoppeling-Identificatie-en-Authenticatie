@@ -11,10 +11,7 @@ onderdeel van een authentieke registratie, logischerwijs het Handelsregister
 (HR).
 
 Dat nummer van de hier bedoelde zelfstandig bevoegde overheidsorganisaties wordt
-hierna aangeduid onder de naam 'Organisatie Identificatie Nummer' OIN.<sup>9</sup>
-
-<sup>9</sup>: De term BIN wordt hier bewust niet gebruikt, omdat die een veel bredere
-    lading heeft.
+hierna aangeduid onder de naam 'Organisatie Identificatie Nummer' OIN.
 
 Idealiter zou dat OIN overeenkomen met een nummer uit het HR. Daarbij rijst de
 vraag: 'Komen alle organisaties die we willen identificeren met een OIN wel voor
@@ -31,7 +28,7 @@ niveaus:
     op Digikoppeling te gebruiken.
 
 - Het niveau onderneming/maatschappelijke activiteit met als
-    identificatienummer het KvKnummer. Aangegeven is, dat dat nummer naar alle
+    identificatienummer het KvK-nummer. Aangegeven is, dat dat nummer naar alle
     waarschijnlijkheid voor de overheid als OIN (dus op Digikoppeling) niet
     geschikt is. Voor bedrijven en instellingen is het KvK nummer wel geschikt.
 
@@ -42,13 +39,13 @@ niveaus:
 Volgens HR is 'rechtspersoon' met een Fi-nummer een criterium voor een op te
 nemen organisatie. Maar: niet alle ZBO’s bijvoorbeeld zijn een rechtspersoon.
 Ander voorbeeld is MijnOverheid. MijnOverheid is door middel van het besluit
-MijnOverheid gerechtigd (heeft de bevoegdheid gekregen) om GBA services af te
+MijnOverheid gerechtigd (heeft de bevoegdheid gekregen) om BRP-services af te
 nemen en wordt daarmee dus onderkend als een zelfstandige 'organisatie', die
-door de GBA geautoriseerd moet kunnen worden. Komt MijnOverheid dan in het HR?
+door de BRP geautoriseerd moet kunnen worden. Komt MijnOverheid dan in het HR?
 En gebeurt dat dan als rechtspersoon of bijvoorbeeld als vestiging (bijvoorbeeld
 van BZK)?
 
-Organisaties' die services aanbieden of afnemen, worden niet in het HR
+Organisaties die services aanbieden of afnemen, worden niet in het HR
 opgenomen.
 
 Gebruik van het RSIN- ten behoeve van identificatie op Digikoppeling benadert de
