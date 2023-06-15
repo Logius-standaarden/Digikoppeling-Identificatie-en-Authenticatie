@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="nl"><head>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 32.1.10 Logius profile 20220628">
+<meta name="generator" content="ReSpec 34.1.1">
 <style>
 dfn{cursor:pointer}
 .dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
@@ -27,12 +27,17 @@ dfn{cursor:pointer}
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
   
   
-<title>Digikoppeling Identificatie en Authenticatie 1.4.2</title>
+<title>Digikoppeling Identificatie en Authenticatie 1.4.3</title>
   
   
-<link rel="shortcut icon" type="image/x-icon" href="https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/logius.ico">
   
-
+<script>
+   respecConfig = {...organisationConfig, ...respecConfig};
+  </script>
+  
+<link href="https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/logius.ico" rel="shortcut icon" type="image/x-icon">
+  
+ 
 <style id="respec-mainstyle">
 @keyframes pop{
 0%{transform:scale(1,1)}
@@ -52,8 +57,6 @@ a.bibref{text-decoration:none}
 }
 #references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
 cite .bibref{font-style:normal}
-code{color:#c63501}
-th code{color:inherit}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
 .toc a,.tof a{text-decoration:none}
@@ -80,9 +83,8 @@ details.respec-tests-details>ul{width:100%;margin-top:-.3em}
 details.respec-tests-details>li{padding-left:1em}
 .self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 aside.example .marker>a.self-link{color:inherit}
-.header-wrapper{display:flex;align-items:baseline}
-:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
-:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+.header-wrapper{display:flex;align-items:baseline;position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-.7em;font-size:1rem;opacity:.5}
 :is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
 :is(h2,h3)+a.self-link{top:-.2em}
 :is(h4,h5,h6)+a.self-link::before{color:#000}
@@ -95,34 +97,697 @@ dd{margin-left:0}
 </style>
 <meta name="description" content="Dit document beschrijft hoe Identificatie en Authenticatie binnen Digikoppeling is opgezet.">
 <style>
-var{position:relative;cursor:pointer}
-var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
-var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
-var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
-var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+.sidelabel{position:fixed;-webkit-transform-origin:top right;right:100%;top:0;-webkit-transform:rotate(-90deg);padding:4px 50px 4px 10px;color:#fff;white-space:nowrap;z-index:1}
 </style>
 <script id="initialUserConfig" type="application/json">{
-  "specStatus": "DEF",
-  "specType": "ST",
-  "pubDomain": "dk",
-  "shortName": "idauth",
-  "publishDate": "2022-04-11",
-  "previousPublishDate": "2017-10-01",
-  "publishVersion": "1.4.2",
-  "previousPublishVersion": "1.4.1",
-  "license": "cc-by-nd",
-  "doJsonLd": true,
-  "editors": [
+  "nl_organisationName": "Logius",
+  "nl_organisationStylesURL": "https://gitdocumentatie.logius.nl/publicatie/respec/style/",
+  "nl_organisationPublishURL": "https://gitdocumentatie.logius.nl/publicatie/",
+  "logos": [
     {
-      "name": "Peter Haasnoot",
-      "url": "https://logius.nl/standaarden"
+      "src": "https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/figure-logius.svg",
+      "alt": "Logius",
+      "id": "Logius",
+      "height": 77,
+      "width": 44,
+      "url": "https://www.logius.nl/standaarden"
+    }
+  ],
+  "latestVersion": [
+    "nl_organisationPublishURL",
+    "pubDomain",
+    "/",
+    "shortName"
+  ],
+  "thisVersion": [
+    "nl_organisationPublishURL",
+    "pubDomain",
+    "/",
+    "shortName",
+    "/",
+    "publishVersion"
+  ],
+  "prevVersion": [
+    "nl_organisationPublishURL",
+    "pubDomain",
+    "/",
+    "shortName",
+    "/",
+    "previousPublishVersion"
+  ],
+  "useLogo": true,
+  "useLabel": true,
+  "license": "cc-by",
+  "addSectionLinks": true,
+  "localizationStrings": {
+    "en": {
+      "wv": "Draft",
+      "cv": "Recommendation",
+      "vv": "Proposed recommendation",
+      "def": "Definitive version",
+      "basis": "Document",
+      "eo": "Outdated version",
+      "tg": "Rescinded version",
+      "no": "Norm",
+      "st": "Standard",
+      "im": "Information model",
+      "pr": "Guideline",
+      "hr": "Guide",
+      "wa": "Proposed recommendation",
+      "al": "General",
+      "bd": "Governance documentation",
+      "bp": "Best practice"
     },
+    "nl": {
+      "wv": "Werkversie",
+      "cv": "Consultatieversie",
+      "vv": "Versie ter vaststelling",
+      "def": "Vastgestelde versie",
+      "basis": "Document",
+      "eo": "Verouderde versie",
+      "tg": "Teruggetrokken versie",
+      "no": "Norm",
+      "st": "Standaard",
+      "im": "Informatiemodel",
+      "pr": "Praktijkrichtlijn",
+      "hr": "Handreiking",
+      "wa": "Werkafspraak",
+      "al": "Algemeen",
+      "bd": "Beheerdocumentatie",
+      "bp": "Best practice"
+    }
+  },
+  "sotdText": {
+    "nl": {
+      "sotd": "Status van dit document",
+      "def": "Dit is de definitieve versie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
+      "wv": "Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door het TO goedgekeurde consultatieversie.",
+      "cv": "Dit is een door het TO goedgekeurde consultatieversie. Commentaar over dit document kan gestuurd worden naar ",
+      "vv": "Dit is een definitief concept van de nieuwe versie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
+      "basis": "Dit is een document zonder officiële status."
+    },
+    "en": {
+      "sotd": "Status of This Document",
+      "def": "This is the definitive version of this document. Edits resulting from consultations have been applied.",
+      "wv": "This is a draft that could be altered, removed or replaced by other documents. It is not a recommendation approved by TO.",
+      "cv": "This is a proposed recommendation approved by TO. Comments regarding this document may be sent to ",
+      "vv": "This is the definitive concept of this document. Edits resulting from consultations have been applied.",
+      "basis": "This document has no official standing."
+    }
+  },
+  "labelColor": {
+    "def": "#154273",
+    "wv": "#39870c"
+  },
+  "licenses": {
+    "cc0": {
+      "name": "Creative Commons 0 Public Domain Dedication",
+      "short": "CC0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-zero.svg"
+    },
+    "cc-by": {
+      "name": "Creative Commons Attribution 4.0 International Public License",
+      "short": "CC-BY",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by.svg"
+    },
+    "cc-by-nd": {
+      "name": "Creative Commons Naamsvermelding-GeenAfgeleideWerken 4.0 Internationaal",
+      "short": "CC-BY-ND",
+      "url": "https://creativecommons.org/licenses/by-nd/4.0/legalcode.nl",
+      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by-nd.svg"
+    }
+  },
+  "localBiblio": {
+    "ADR": {
+      "authors": [
+        "Jasper Roes",
+        "Joost Farla"
+      ],
+      "date": "Juli 2020",
+      "href": "https://publicatie.centrumvoorstandaarden.nl/api/adr/",
+      "publisher": "Logius",
+      "title": "API Design Rules (Nederlandse API Strategie IIa)"
+    },
+    "ADR-ext": {
+      "authors": [
+        "Jasper Roes",
+        "Linda van den Brink"
+      ],
+      "date": "Januari 2020",
+      "href": "https://docs.geostandaarden.nl/api/API-Strategie-ext",
+      "publisher": "Geonovum/Kennisplatform APi's",
+      "title": "API Designrules Extensions (Nederlandse API Strategie IIb)"
+    },
+    "Algemene Voorwaarden Logius": {
+      "date": "12 juni 2018",
+      "href": "https://www.logius.nl/onze-organisatie/zakendoen-met-logius/voorwaarden/algemene-voorwaarden-logius",
+      "publisher": "Logius",
+      "title": "Algemene voorwaarden Logius"
+    },
+    "API Design Rules": {
+      "authors": [
+        "Jasper Roes",
+        "Joost Farla"
+      ],
+      "date": "Juli 2020",
+      "href": "https://publicatie.centrumvoorstandaarden.nl/api/adr/",
+      "publisher": "Logius",
+      "title": "API Design Rules (Nederlandse API Strategie IIa)"
+    },
+    "API Design Rules-Extensions": {
+      "authors": [
+        "Jasper Roes",
+        "Linda van den Brink"
+      ],
+      "date": "Januari 2020",
+      "href": "https://docs.geostandaarden.nl/api/API-Strategie-ext",
+      "publisher": "Geonovum/Kennisplatform APi's",
+      "title": "API Designrules Extensions (Nederlandse API Strategie IIb)"
+    },
+    "BCP195": {
+      "authors": [
+        "Y. Sheffer, R. Holz, P. Saint-Andre"
+      ],
+      "date": "May 2015",
+      "href": "https://tools.ietf.org/html/bcp195",
+      "publisher": "IETF",
+      "title": "Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)"
+    },
+    "Beheermodel": {
+      "date": "Oktober 2017",
+      "href": "https://www.logius.nl/sites/default/files/public/bestanden/diensten/DigiKoppeling/Standaarden/Digikoppeling-Beheermodel.pdf",
+      "publisher": "Logius",
+      "title": "Beheermodel en releasebeleid Digikoppeling v1.5"
+    },
+    "Beveiligingsdocument": {
+      "href": "https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Beveiligingsstandaarden en voorschriften"
+    },
+    "Certificaten": {
+      "href": "https://cert.pkioverheid.nl/",
+      "publisher": "Logius",
+      "title": "PkIoverheid certificaten"
+    },
+    "CloudEvents": {
+      "authors": [
+        "@@@"
+      ],
+      "date": "May 2011",
+      "href": "https://github.com/cloudevents/spec/blob/v1.0.1/spec.md",
+      "publisher": "@@@",
+      "title": "CloudEvents - Version 1.0.1"
+    },
+    "Compliance": {
+      "href": "https://portaal.digikoppeling.nl",
+      "publisher": "Logius",
+      "title": "Digikoppeling Compliance Voorziening"
+    },
+    "Deployment Guide 1.1": {
+      "authors": [
+        "Pete Wenzel",
+        "Jacques Durand"
+      ],
+      "date": "June 2005",
+      "href": "http://www.oasis-open.org/apps/org/workgroup/ebxml-iic-deployment-profile-template-intro-100406.doc",
+      "publisher": "OASIS",
+      "title": "Deployment Profile Template For OASIS ebXML Message Service 2.0"
+    },
+    "Digikoppeling Actuele Documentatie": {
+      "href": "http://www.logius.nl/digikoppeling",
+      "publisher": "Logius",
+      "title": "Digikoppeling Overzicht Actuele Documentatie en Compliance"
+    },
+    "Digikoppeling Beheermodel": {
+      "date": "Oktober 2017",
+      "href": "https://www.logius.nl/sites/default/files/public/bestanden/diensten/DigiKoppeling/Standaarden/Digikoppeling-Beheermodel.pdf",
+      "publisher": "Logius",
+      "title": "Beheermodel en releasebeleid Digikoppeling v1.5"
+    },
+    "Digikoppeling Best Practices ebMS2": {
+      "date": "2019",
+      "href": "https://www.logius.nl/diensten/digikoppeling/documentatie",
+      "publisher": "Logius",
+      "title": "Digikoppeling Best Practices ebMS2"
+    },
+    "Digikoppeling Best Practices Grote Berichten": {
+      "date": "2019",
+      "href": "https://www.logius.nl/diensten/digikoppeling/documentatie",
+      "publisher": "Logius",
+      "title": "Digikoppeling Best Practices Grote Berichten"
+    },
+    "Digikoppeling Best Practices WUS": {
+      "date": "2019",
+      "href": "https://www.logius.nl/diensten/digikoppeling/documentatie",
+      "publisher": "Logius",
+      "title": "Digikoppeling Best Practices WUS"
+    },
+    "Digikoppeling Beveiligingsdocument": {
+      "date": "2021",
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Beveiligingsstandaarden en voorschriften"
+    },
+    "Digikoppeling Compliance Voorziening": {
+      "href": "https://portaal.digikoppeling.nl",
+      "publisher": "Logius",
+      "title": "Digikoppeling Compliance Voorziening"
+    },
+    "Digikoppeling Gebruik Certificaten": {
+      "href": "http://www.logius.nl/digikoppeling",
+      "publisher": "Logius",
+      "title": "Digikoppeling Gebruik en achtergrond certificaten"
+    },
+    "Digikoppeling Identificatie-Authenticatie": {
+      "href": "https://www.logius.nl/diensten/digikoppeling/documentatie",
+      "publisher": "Logius",
+      "title": "Digikoppeling Identificatie en Authenticatie"
+    },
+    "Digikoppeling Koppelvlakstandaard ebMS2": {
+      "date": "mei 2019",
+      "href": "https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Koppelvlakstandaard ebMS2"
+    },
+    "Digikoppeling Koppelvlakstandaard Grote Berichten": {
+      "date": "september 2020",
+      "href": "https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Koppelvlakstandaard Grote Berichten"
+    },
+    "Digikoppeling Koppelvlakstandaard REST API": {
+      "date": "februari 2021",
+      "href": "https://centrumvoorstandaarden.github.io/DigikoppelingRestfulApiProfiel/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Restful API Profiel (Concept)"
+    },
+    "Digikoppeling Koppelvlakstandaard WUS": {
+      "date": "oktober 2020",
+      "href": "https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Koppelvlakstandaard ebMS2"
+    },
+    "Digikoppeling Logius website": {
+      "href": "https://logius.nl/diensten/digikoppeling/documentatie",
+      "publisher": "Logius",
+      "title": "Logius Digikoppeling"
+    },
+    "Digikoppeling REST API profiel": {
+      "href": "https://publicatie.centrumvoorstandaarden.nl/dk/restapi/",
+      "publisher": "Logius",
+      "title": "Digikoppeling REST API profiel"
+    },
+    "Digikoppeling-Architectuur": {
+      "href": "https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Architectuur"
+    },
+    "Digikoppeling-Beveiligingsdocument": {
+      "href": "https://publicatie.centrumvoorstandaarden.nl/dk/beveilig",
+      "publisher": "Logius",
+      "title": "Digikoppeling Beveiligingsstandaarden en voorschriften"
+    },
+    "Digikoppeling-Cert": {
+      "href": "http://www.logius.nl/digikoppeling",
+      "publisher": "Logius",
+      "title": "Gebruik en achtergrond van Digikoppeling certificaten"
+    },
+    "Digikoppeling-Compliance-Voorziening": {
+      "href": "https://portaal.digikoppeling.nl",
+      "publisher": "Logius",
+      "title": "Digikoppeling Compliance Voorziening"
+    },
+    "Digikoppeling-Identificatie-Authenticatie": {
+      "href": "https://publicatie.centrumvoorstandaarden.nl/dk/idauth",
+      "publisher": "Logius",
+      "title": "Digikoppeling Identificatie en Authenticatie"
+    },
+    "ebCPP": {
+      "authors": [
+        "Oasis"
+      ],
+      "date": "september 2002",
+      "href": "http://www.ebxml.org/specs/ebcpp-2.0.pdf",
+      "publisher": "Oasis",
+      "title": "Collaboration-Protocol Profile and Agreement Specification Version 2.0"
+    },
+    "ebMS3": {
+      "authors": [
+        "Ian Jones",
+        "Pete Wenzel"
+      ],
+      "date": "October 2007",
+      "href": "https://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms_core-3.0-spec-os.html",
+      "publisher": "Oasis",
+      "title": "Collaboration-Protocol Profile and Agreement Specification Version 2.0"
+    },
+    "ebXML CPPA V 2.0": {
+      "authors": [
+        "Oasis"
+      ],
+      "date": "september 2002",
+      "href": "http://www.ebxml.org/specs/ebcpp-2.0.pdf",
+      "publisher": "Oasis",
+      "title": "Collaboration-Protocol Profile and Agreement Specification Version 2.0"
+    },
+    "eDelivery API4IPS": {
+      "authors": [
+        "J. Dimitriou, V. Veduta, B. Dumitriu"
+      ],
+      "date": "sept 8 2022",
+      "href": "https://ec.europa.eu/digital-building-blocks/wikis/display/EDELCOMMUNITY/Project+deliverables",
+      "publisher": "OpenID foundation",
+      "title": "(ISA2).(eDelivery).(Piloting a REST API extension of CEF eDelivery).(ISA² IPS REST API Profile).(v1.0).pdf"
+    },
+    "Eisen Pkioverheid": {
+      "href": "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen",
+      "publisher": "Logius",
+      "title": "Programma van Eisen (PKIoverheid)"
+    },
+    "Expert": {
+      "authors": [
+        "@@@"
+      ],
+      "date": "@@@",
+      "href": "https://www.forumstandaardisatie.nl/sites/bfs/files/@@@.pdf",
+      "publisher": "Forum Standaardisatie",
+      "title": "Expertadvies CloudEvents 1.0"
+    },
+    "Gebruiksvoorwaarden Digikoppeling": {
+      "date": "1 januari 2021",
+      "href": "https://www.logius.nl/diensten/digikoppeling/documentatie/gebruiksvoorwaarden-digikoppeling",
+      "publisher": "Logius",
+      "title": "Gebruiksvoorwaarden Digikoppeling"
+    },
+    "Geospatial Module": {
+      "authors": [
+        "L. van den Brink, P. Bresters, P. van Genuchten, G. Mathijssen, M. Strijker"
+      ],
+      "date": "23 mei 2021",
+      "href": "https://docs.geostandaarden.nl/api/API-Strategie-mod-geo/",
+      "publisher": "Geonovum",
+      "title": "API Design rules Module: Geospatial"
+    },
+    "HEART.OAuth2": {
+      "authors": [
+        "J. Richer"
+      ],
+      "date": "April 25, 2017",
+      "href": "https://openid.net/specs/openid-heart-oauth2-1_0.html",
+      "publisher": "OpenID foundation",
+      "title": "Health Relationship Trust Profile for OAuth 2.0"
+    },
+    "HTTPS-factsheet NCSC": {
+      "date": "Nov 2014",
+      "href": "https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-https-kan-een-stuk-veiliger",
+      "publisher": "NCSC",
+      "title": "Factsheet HTTPS kan een stuk veiliger"
+    },
+    "I-D.ietf-oauth-pop-architecture": {
+      "authors": [
+        "P. Hunt, J. Richer, W. Mills, P. Mishra, H. Tschofenig"
+      ],
+      "date": "July 8, 2016",
+      "href": "https://tools.ietf.org/html/draft-ietf-oauth-pop-architecture-08",
+      "publisher": "IETF",
+      "title": "OAuth 2.0 Proof-of-Possession (PoP) Security Architecture"
+    },
+    "iGOV.OAuth2": {
+      "authors": [
+        "J. Richer, M. Varley, P. Grassi"
+      ],
+      "date": "October 5 2018",
+      "href": "https://openid.net/specs/openid-igov-oauth2-1_0.html",
+      "publisher": "OpenID foundation",
+      "title": "International Government Assurance Profile (iGov) for OAuth 2.0"
+    },
+    "iGOV.OpenID": {
+      "authors": [
+        "M. Varley, P. Grassi"
+      ],
+      "date": "October 5 2018",
+      "href": "https://openid.net/specs/openid-igov-openid-connect-1_0.html",
+      "publisher": "OpenID foundation",
+      "title": "International Government Assurance Profile (iGov) for OpenID Connect 1.0 - draft 3"
+    },
+    "Introspection": {
+      "authors": [
+        "J. Richer"
+      ],
+      "date": "October 2015",
+      "href": "https://tools.ietf.org/html/rfc7662",
+      "publisher": "IETF",
+      "title": "OAuth 2.0 Token Introspection"
+    },
+    "JWA": {
+      "authors": [
+        "M. Jones"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7518",
+      "publisher": "IETF",
+      "title": "JSON Web Algorithms (JWA)"
+    },
+    "JWE": {
+      "authors": [
+        "M. Jones, J. Hildebrand"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7516",
+      "publisher": "IETF",
+      "title": "JSON Web Encryption (JWE)"
+    },
+    "JWK": {
+      "authors": [
+        "M. Jones"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7517",
+      "publisher": "IETF",
+      "title": "JSON Web Key (JWK))"
+    },
+    "JWS": {
+      "authors": [
+        "M. Jones, J. Bradley, N. Sakimura"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7515",
+      "publisher": "IETF",
+      "title": "JSON Web Signature (JWS)"
+    },
+    "JWS.JWE.Algs": {
+      "authors": [
+        "Jim Schaad, Jeff Hodges, Joe Hildebrand, Sean Turner"
+      ],
+      "date": "",
+      "href": "https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms",
+      "publisher": "IANA",
+      "title": "IANA JSON Web Signatures and Encryption Algorithms registry"
+    },
+    "JWT": {
+      "authors": [
+        "M. Jones, J. Bradley, N. Sakimura"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7519",
+      "publisher": "IETF",
+      "title": "JSON Web Token (JWT)"
+    },
+    "Logius": {
+      "href": "https://logius.nl/digikoppeling",
+      "publisher": "Logius",
+      "title": "Logius Digikoppeling"
+    },
+    "Logius website": {
+      "href": "https://logius.nl/digikoppeling",
+      "publisher": "Logius",
+      "title": "Logius Digikoppeling"
+    },
+    "Logius-website": {
+      "href": "https://logius.nl/digikoppeling",
+      "publisher": "Logius",
+      "title": "Logius Digikoppeling"
+    },
+    "NCSC 2019": {
+      "date": "April 2019",
+      "href": "https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-tls",
+      "publisher": "NCSC",
+      "title": "ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.0"
+    },
+    "NCSC 2021": {
+      "date": "Jan 2021",
+      "href": "https://www.ncsc.nl/documenten/publicaties/2021/januari/19/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2.1",
+      "publisher": "NCSC",
+      "title": "ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1"
+    },
+    "NEN3610": {
+      "authors": [
+        ""
+      ],
+      "date": "Maart 2011",
+      "href": "https://www.nen.nl/nen-3610-2011-a1-2016-nl-217738",
+      "publisher": "Nederlands Normalisatie-instituut",
+      "title": "Basismodel Geo-informatie - Termen, definities, relaties en algemene regels voor de uitwisseling van informatie over aan de aarde gerelateerde ruimtelijke objecten"
+    },
+    "no-Reliable-messaging": {
+      "authors": [
+        "Marc de Graauw"
+      ],
+      "date": "June 18, 2010",
+      "href": "https://www.infoq.com/articles/no-reliable-messaging/",
+      "publisher": "infoQ",
+      "title": "Nobody Needs Reliable Messaging"
+    },
+    "OAuth2": {
+      "authors": [
+        "D. Hardt"
+      ],
+      "date": "October 2012",
+      "href": "https://tools.ietf.org/html/rfc6749",
+      "publisher": "The Internet Engineering Task Force",
+      "title": "The OAuth 2.0 Authorization Framework"
+    },
+    "OpenID.Core": {
+      "authors": [
+        "N. Sakimura, J. Bradley, M. Jones, B. de Medeiros, C. Mortimore"
+      ],
+      "date": "November 8 2014",
+      "href": "https://openid.net/specs/openid-connect-core-1_0.html",
+      "publisher": "OpenID foundation",
+      "title": "OpenID Connect Core 1.0"
+    },
+    "OpenID.Discovery": {
+      "authors": [
+        "N. Sakimura, J. Bradley, M. Jones, E. Jay"
+      ],
+      "date": "November 8 2014",
+      "href": "https://openid.net/specs/openid-connect-discovery-1_0.html",
+      "publisher": "OpenID foundation",
+      "title": "OpenID Connect Discovery 1.0"
+    },
+    "Pas-toe-of-leg-uit": {
+      "href": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht",
+      "publisher": "Forum Standaardisatie",
+      "title": "Lijst Verplichte standaarden"
+    },
+    "PKCE": {
+      "authors": [
+        "N. Sakimura, J. Bradley, N. Agarwal"
+      ],
+      "date": "september 2015",
+      "href": "https://tools.ietf.org/html/rfc7636",
+      "publisher": "IETF",
+      "title": "Proof Key for Code Exchange by OAuth Public Clients"
+    },
+    "PKI CA": {
+      "href": "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/toegetreden-vertrouwensdienstverleners",
+      "publisher": "Logius",
+      "title": "Toegetreden vertrouwensdienstverleners"
+    },
+    "PKI Policy": {
+      "href": "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen",
+      "publisher": "Logius",
+      "title": "Programma van Eisen (PKIoverheid)"
+    },
+    "PKI PvE": {
+      "href": "https://www.logius.nl/sites/default/files/public/bestanden/diensten/PKIoverheid/PoR-2022/PKIoverheid%20Programme%20of%20Requirements%20v4.10%20-%20Part%203j%20Certificate%20Policy%20for%20Server%20certificates%20in%20Server%202020%20%28EV%20G1%29%20Domain.pdf",
+      "publisher": "Logius",
+      "title": "Programma van Eisen Pkioverheid, deel 3j"
+    },
+    "PKI-CA": {
+      "href": "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/toegetreden-vertrouwensdienstverleners",
+      "publisher": "Logius",
+      "title": "Toegetreden vertrouwensdienstverleners"
+    },
+    "PKI-Policy": {
+      "href": "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen",
+      "publisher": "Logius",
+      "title": "Programma van Eisen (PKIoverheid)"
+    },
+    "PKIoverheid": {
+      "href": "https://www.logius.nl/diensten/pkioverheid",
+      "publisher": "Logius",
+      "title": "PKIoverheid"
+    },
+    "PKIoverheid Certificaten": {
+      "href": "https://cert.pkioverheid.nl/",
+      "publisher": "Logius",
+      "title": "Pkioverheid certificaten"
+    },
+    "PKIoverheid-Certificaten": {
+      "href": "https://cert.pkioverheid.nl/",
+      "publisher": "Logius",
+      "title": "Pkioverheid certificaten"
+    },
+    "SemVer": {
+      "authors": [
+        "T. Preston-Werner"
+      ],
+      "date": "June 2013",
+      "href": "https://semver.org",
+      "title": "Semantic Versioning 2.0.0"
+    },
+    "UMMR10": {
+      "authors": [
+        ""
+      ],
+      "date": "2001",
+      "href": "https://unece.org/DAM/cefact/umm/UMM_Revision_10_2001.zip",
+      "publisher": "UN/CEFACT",
+      "title": "UMM Revision 10"
+    },
+    "UMMUG": {
+      "authors": [
+        ""
+      ],
+      "date": "2003",
+      "href": "https://www.unece.org/fileadmin/DAM/cefact/umm/UMM_userguide_220606.pdf",
+      "publisher": "UN/CEFACT",
+      "title": "UN/CEFACT Modeling Methodology (UMM) User Guide"
+    },
+    "UUID": {
+      "authors": [
+        "P. Leach",
+        "M. Mealling",
+        "R. Salz"
+      ],
+      "date": "July 2005",
+      "href": "https://tools.ietf.org/html/rfc4122",
+      "publisher": "The Internet Engineering Task Force",
+      "title": "A Universally Unique IDentifier (UUID) URN Namespace"
+    },
+    "Voorbeelden": {
+      "href": "https://www.logius.nl/sites/default/files/public/bestanden/diensten/DigiKoppeling/Overig/Digikoppeling-Koppelvlakstandaard-WUS-Voorbeeldberichten.zip",
+      "publisher": "Logius",
+      "title": "Digikoppeling WUS voorbeelden (zip)"
+    },
+    "Voorwaarden Digikoppeling": {
+      "date": "1 januari 2021",
+      "href": "https://www.logius.nl/diensten/digikoppeling/documentatie/voorwaarden-digikoppeling",
+      "publisher": "Logius",
+      "title": "Voorwaarden Digikoppeling"
+    },
+    "X520": {
+      "href": "https://www.iso.org/standard/43796.html",
+      "publisher": "ISO",
+      "title": "ITU-T Recommendation X.520 (2001) ISO/IEC 9594-6"
+    },
+    "ADR-Validator": {
+      "href": "https://gitlab.com/commonground/don/adr-validator/-/blob/v0.1.0/pkg/adr/rules.go",
+      "title": "Technical ADR Validation rule testset 0.1.0",
+      "authors": [
+        "H. Stijns"
+      ],
+      "publisher": "Geonovum",
+      "date": "December 2022"
+    }
+  },
+  "alternateFormats": [
     {
-      "name": "Pieter Hering",
-      "mailto": "api@digikoppeling.nl",
-      "company": "Logius",
-      "companyURL": "https://logius.nl/standaarden",
-      "url": "mailto:api@digikoppeling.nl"
+      "label": "pdf",
+      "uri": "Digikoppeling-Identificatie-en-Authenticatie.pdf"
     }
   ],
   "authors": [
@@ -131,111 +796,51 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "url": "https://logius.nl/standaarden"
     }
   ],
-  "github": "https://github.com/Logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie",
-  "addSectionLinks": true,
-  "a11y": false,
-  "alternateFormats": [
+  "editors": [
     {
-      "label": "pdf",
-      "uri": "Digikoppeling-Identificatie-en-Authenticatie.pdf"
+      "name": "Peter Haasnoot",
+      "url": "https://logius.nl/standaarden"
+    },
+    {
+      "company": "Logius",
+      "companyURL": "https://logius.nl/standaarden",
+      "mailto": "api@digikoppeling.nl",
+      "name": "Pieter Hering",
+      "url": "mailto:api@digikoppeling.nl"
     }
   ],
-  "nl_emailComments": "digikoppeling@logius.nl",
-  "nl_addReleaseTagTitle": true,
-  "nl_markdownSplitH1sections": true,
-  "nl_organisationName": "Logius",
-  "nl_organisationPrefix": "LS-",
-  "nl_markdownEmbedImageInFigure": true,
-  "nl_organisationStylesURL": "https://publicatie.centrumvoorstandaarden.nl/respec/style/",
-  "nl_organisationPublishURL": "https://publicatie.centrumvoorstandaarden.nl/",
-  "nl_logo": {
-    "src": "https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg",
-    "alt": "Logius",
-    "id": "Logius",
-    "height": 77,
-    "width": 44,
-    "url": "https://www.logius.nl/standaarden"
-  },
-  "localBiblio": {
-    "NEN3610": {
-      "href": "https://www.nen.nl/nen-3610-2011-a1-2016-nl-217738",
-      "title": "Basismodel Geo-informatie - Termen, definities, relaties en algemene regels voor de uitwisseling van informatie over aan de aarde gerelateerde ruimtelijke objecten",
-      "authors": [
-        ""
-      ],
-      "date": "Maart 2011",
-      "publisher": "Nederlands Normalisatie-instituut"
-    },
-    "Digikoppeling Architectuur": {
-      "href": "https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/",
-      "title": "Digikoppeling Architectuur",
-      "authors": [
-        "Logius Centrum voor standaarden"
-      ],
-      "publisher": "Logius"
-    },
-    "Digikoppeling Beveiligingsdocument": {
-      "href": "https://publicatie.centrumvoorstandaarden.nl/dk/beveilig",
-      "title": "Digikoppeling Beveiligingsstandaarden en voorschriften",
-      "date": "2020",
-      "publisher": "Logius"
-    },
-    "Digikoppeling-Cert": {
-      "href": "http://www.logius.nl/digikoppeling",
-      "title": "Gebruik en achtergrond van Digikoppeling certificaten",
-      "publisher": "Logius"
-    },
-    "PKI Policy": {
-      "href": "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen",
-      "title": "Programma van Eisen (PKIoverheid)",
-      "publisher": "Logius"
-    },
-    "PKI CA": {
-      "href": "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/toegetreden-vertrouwensdienstverleners",
-      "title": "Toegetreden vertrouwensdienstverleners",
-      "publisher": "Logius"
-    },
-    "PKIoverheid Certificaten": {
-      "href": "https://cert.pkioverheid.nl/",
-      "title": "Pkioverheid certificaten",
-      "publisher": "Logius"
-    },
-    "Logius website": {
-      "href": "https://logius.nl/digikoppeling",
-      "title": "Logius Digikoppeling",
-      "publisher": "Logius"
-    },
-    "Digikoppeling Compliance Voorziening": {
-      "href": "https://portaal.digikoppeling.nl",
-      "title": "Digikoppeling Compliance Voorziening",
-      "publisher": "Logius"
-    }
-  },
-  "publishISODate": "2022-04-11T00:00:00.000Z",
-  "generatedSubtitle": "Vastgestelde versie 11 april 2022"
+  "github": "https://github.com/Logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie",
+  "previousPublishDate": "2022-04-11",
+  "previousPublishVersion": "1.4.2",
+  "pubDomain": "dk",
+  "publishDate": "2023-06-15",
+  "publishVersion": "1.4.3",
+  "shortName": "idauth",
+  "specStatus": "DEF",
+  "specType": "ST"
 }</script>
-<link rel="stylesheet" href="https://publicatie.centrumvoorstandaarden.nl/respec/style/LS-DEF.css"></head>
-
-<body class="h-entry toc-inline"><div class="head">
-    <a class="logo" href="https://www.logius.nl/standaarden"><img alt="Logius" height="77" id="Logius" src="https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg" width="44">
-  </a> <h1 id="title" class="title">Digikoppeling Identificatie en Authenticatie 1.4.2</h1>
+<link rel="stylesheet" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/base.css"></head>
+ <body class="h-entry toc-inline"><div class="head">
+    <a class="logo" href="https://www.logius.nl/standaarden"><img alt="Logius" height="77" id="Logius" src="https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/figure-logius.svg" width="44">
+  </a> <h1 id="title" class="title">Digikoppeling Identificatie en Authenticatie 1.4.3</h1>
     
     <h2>
       Logius Standaard<br>
       Vastgestelde versie
-      <time class="dt-published" datetime="2022-04-11">11 april 2022</time>
+      <time class="dt-published" datetime="2023-06-15">15 juni 2023</time>
     </h2>
     <dl>
       <dt>Deze versie:</dt><dd class="status">
-              <a class="u-url status" href="https://publicatie.centrumvoorstandaarden.nl/dk/idauth/1.4.2">https://publicatie.centrumvoorstandaarden.nl/dk/idauth/1.4.2</a>
-            </dd><dt>Laatst gepubliceerde versie:</dt><dd>
-              <a href="https://publicatie.centrumvoorstandaarden.nl/dk/idauth/">https://publicatie.centrumvoorstandaarden.nl/dk/idauth/</a>
+              <a class="u-url status" href="https://gitdocumentatie.logius.nl/publicatie/dk/idauth/1.4.3">https://gitdocumentatie.logius.nl/publicatie/dk/idauth/1.4.3</a>
+            </dd>
+      <dt>Laatst gepubliceerde versie:</dt><dd>
+              <a href="https://gitdocumentatie.logius.nl/publicatie/dk/idauth">https://gitdocumentatie.logius.nl/publicatie/dk/idauth</a>
             </dd>
       <dt>Laatste werkversie:</dt><dd><a href="https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie/">https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie/</a></dd>
       
       
       
-      <dt>Vorige versie</dt><dd><a href="https://publicatie.centrumvoorstandaarden.nl/dk/idauth/1.4.1/">https://publicatie.centrumvoorstandaarden.nl/dk/idauth/1.4.1/</a></dd>
+      <dt>Vorige versie</dt><dd><a href="https://gitdocumentatie.logius.nl/publicatie/dk/idauth/1.4.2">https://gitdocumentatie.logius.nl/publicatie/dk/idauth/1.4.2</a></dd>
       
       <dt>Redacteurs:</dt>
       <dd class="editor p-author h-card vcard">
@@ -259,13 +864,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </dl>
     
     
-    <p lang="en">
-          This document is also available in this non-normative format:
+    <p>
+          Dit document is ook beschikbaar in dit niet-normatieve formaat:
           <a rel="alternate" href="Digikoppeling-Identificatie-en-Authenticatie.pdf">pdf</a>
         </p>
-    <p class="copyright" lang="en">
-          This document is licensed under a
-          <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="subfoot">Creative Commons Attribution 4.0 License</a>.
+    <p class="copyright">
+          Dit document valt onder de volgende licentie: 
+          <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img style="float: left; padding-right: 5px;" src="https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
         </p>
     <hr title="Separator for header">
   </div>
@@ -273,8 +878,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 <p>Het document is bestemd voor architecten en ontwikkelaars die op basis van Digikoppeling gegevens willen uitwisselen.</p>
 </section>
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2>Dit is de definitieve versie van de  standaard. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.<p>Het OBDO heeft op advies van het Forum Standaardisatie deze versie vastgesteld.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1. </bdi>Inleiding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#doelgroep-van-dit-document"><bdi class="secno">1.1 </bdi>Doelgroep van dit document</a></li><li class="tocline"><a class="tocxref" href="#leeswijzer"><bdi class="secno">1.2 </bdi>Leeswijzer</a></li><li class="tocline"><a class="tocxref" href="#digikoppeling-standaarden"><bdi class="secno">1.3 </bdi>Digikoppeling standaarden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#probleemstelling"><bdi class="secno">2. </bdi>Probleemstelling</a></li><li class="tocline"><a class="tocxref" href="#kernbegrippen"><bdi class="secno">3. </bdi>Kernbegrippen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#identificatie"><bdi class="secno">3.1 </bdi>Identificatie</a></li><li class="tocline"><a class="tocxref" href="#authenticatie"><bdi class="secno">3.2 </bdi>Authenticatie</a></li><li class="tocline"><a class="tocxref" href="#autorisatie"><bdi class="secno">3.3 </bdi>Autorisatie</a></li><li class="tocline"><a class="tocxref" href="#niveau-van-identiteit"><bdi class="secno">3.4 </bdi>Niveau van identiteit</a></li><li class="tocline"><a class="tocxref" href="#vastlegging-audittrail"><bdi class="secno">3.5 </bdi>Vastlegging, audittrail</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gewenst-niveau-van-identiteit"><bdi class="secno">4. </bdi>Gewenst niveau van identiteit</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#autorisatie-0"><bdi class="secno">4.1 </bdi>Autorisatie</a></li><li class="tocline"><a class="tocxref" href="#voorstel-voor-principe"><bdi class="secno">4.2 </bdi>Voorstel voor principe</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gevolg-voor-verantwoordelijkheden"><bdi class="secno">4.2.1 </bdi>Gevolg voor verantwoordelijkheden</a></li><li class="tocline"><a class="tocxref" href="#beoogd-resultaat"><bdi class="secno">4.2.2 </bdi>Beoogd resultaat</a></li><li class="tocline"><a class="tocxref" href="#voorbeelden"><bdi class="secno">4.2.3 </bdi>Voorbeelden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#vastlegging"><bdi class="secno">4.3 </bdi>Vastlegging</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#beoogd-resultaat-0"><bdi class="secno">4.3.1 </bdi>Beoogd resultaat</a></li></ol></li><li class="tocline"><a class="tocxref" href="#intermediair-en-koppelpunt"><bdi class="secno">4.4 </bdi>Intermediair en koppelpunt</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#identiteit-authenticatie-en-vastlegging-bij-koppelpunten"><bdi class="secno">4.4.1 </bdi>Identiteit, authenticatie en vastlegging bij koppelpunten</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#identiteit-en-nummer"><bdi class="secno">5. </bdi>Identiteit en nummer</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#voorstel"><bdi class="secno">5.1 </bdi>Voorstel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlage-1-nummersystematiek-oin-en-hrn"><bdi class="secno">6. </bdi>Bijlage 1: Nummersystematiek OIN en HRN</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oin-formaat-als-thans-in-gebruik-voor-overheids-organisaties"><bdi class="secno">6.1 </bdi>OIN formaat, als thans in gebruik voor (Overheids)organisaties</a></li><li class="tocline"><a class="tocxref" href="#prefix-tabel"><bdi class="secno">6.2 </bdi>Prefix tabel</a></li><li class="tocline"><a class="tocxref" href="#hrn-formaat-te-gebruiken-voor-bedrijven"><bdi class="secno">6.3 </bdi>HRN formaat, te gebruiken voor Bedrijven</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">7. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">8. </bdi>Lijst met figuren</a></li></ol></nav>
-  <section class="introductory"><h1>Documentbeheer</h1>
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is de definitieve versie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#documentbeheer">Documentbeheer</a></li><li class="tocline"><a class="tocxref" href="#colofon">Colofon</a></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1. </bdi>Inleiding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#doelgroep-van-dit-document"><bdi class="secno">1.1 </bdi>Doelgroep van dit document</a></li><li class="tocline"><a class="tocxref" href="#leeswijzer"><bdi class="secno">1.2 </bdi>Leeswijzer</a></li><li class="tocline"><a class="tocxref" href="#digikoppeling-standaarden"><bdi class="secno">1.3 </bdi>Digikoppeling standaarden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#probleemstelling"><bdi class="secno">2. </bdi>Probleemstelling</a></li><li class="tocline"><a class="tocxref" href="#kernbegrippen"><bdi class="secno">3. </bdi>Kernbegrippen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#identificatie"><bdi class="secno">3.1 </bdi>Identificatie</a></li><li class="tocline"><a class="tocxref" href="#authenticatie"><bdi class="secno">3.2 </bdi>Authenticatie</a></li><li class="tocline"><a class="tocxref" href="#autorisatie"><bdi class="secno">3.3 </bdi>Autorisatie</a></li><li class="tocline"><a class="tocxref" href="#niveau-van-identiteit"><bdi class="secno">3.4 </bdi>Niveau van identiteit</a></li><li class="tocline"><a class="tocxref" href="#vastlegging-audittrail"><bdi class="secno">3.5 </bdi>Vastlegging, audittrail</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gewenst-niveau-van-identiteit"><bdi class="secno">4. </bdi>Gewenst niveau van identiteit</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#autorisatie-0"><bdi class="secno">4.1 </bdi>Autorisatie</a></li><li class="tocline"><a class="tocxref" href="#voorstel-voor-principe"><bdi class="secno">4.2 </bdi>Voorstel voor principe</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gevolg-voor-verantwoordelijkheden"><bdi class="secno">4.2.1 </bdi>Gevolg voor verantwoordelijkheden</a></li><li class="tocline"><a class="tocxref" href="#beoogd-resultaat"><bdi class="secno">4.2.2 </bdi>Beoogd resultaat</a></li><li class="tocline"><a class="tocxref" href="#voorbeelden"><bdi class="secno">4.2.3 </bdi>Voorbeelden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#vastlegging"><bdi class="secno">4.3 </bdi>Vastlegging</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#beoogd-resultaat-0"><bdi class="secno">4.3.1 </bdi>Beoogd resultaat</a></li></ol></li><li class="tocline"><a class="tocxref" href="#intermediair-en-koppelpunt"><bdi class="secno">4.4 </bdi>Intermediair en koppelpunt</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#identiteit-authenticatie-en-vastlegging-bij-koppelpunten"><bdi class="secno">4.4.1 </bdi>Identiteit, authenticatie en vastlegging bij koppelpunten</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#identiteit-en-nummer"><bdi class="secno">5. </bdi>Identiteit en nummer</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#voorstel"><bdi class="secno">5.1 </bdi>Voorstel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlage-1-nummersystematiek-oin-en-hrn"><bdi class="secno">6. </bdi>Bijlage 1: Nummersystematiek OIN en HRN</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oin-formaat-als-thans-in-gebruik-voor-overheids-organisaties"><bdi class="secno">6.1 </bdi>OIN formaat, als thans in gebruik voor (Overheids)organisaties</a></li><li class="tocline"><a class="tocxref" href="#prefix-tabel"><bdi class="secno">6.2 </bdi>Prefix tabel</a></li><li class="tocline"><a class="tocxref" href="#hrn-formaat-te-gebruiken-voor-bedrijven"><bdi class="secno">6.3 </bdi>HRN formaat, te gebruiken voor Bedrijven</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">7. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">8. </bdi>Lijst met figuren</a></li></ol></nav>
+  <section class="introductory" id="documentbeheer"><div class="header-wrapper"><h2 id="documentbeheer-0">Documentbeheer</h2><a class="self-link" href="#documentbeheer" aria-label="Permalink for this Section"></a></div>
 <table class="simple">
 <thead>
 <tr>
@@ -316,7 +921,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </tr>
 </tbody></table>
 </section>
-  <section class="introductory"><h1>Colofon</h1>
+  <section class="introductory" id="colofon"><div class="header-wrapper"><h2 id="colofon-0">Colofon</h2><a class="self-link" href="#colofon" aria-label="Permalink for this Section"></a></div>
 <table class="simple">
 <thead>
 <tr>
@@ -326,12 +931,11 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </thead>
 <tbody><tr>
 <td>Logius Servicecentrum:</td>
-<td>Postbus 96810 2509<br>JE Den Haag<br>t. 0900 555 4555 (10 ct p/m)<br>e.<a href="mailto:servicecentrum@logius.nl">servicecentrum@logius.nl</a></td>
+<td>Postbus 96810 <br>2509 JE Den Haag<br>tel. 0900 555 4555 (10 ct p/m)<br>email <a href="mailto:servicecentrum@logius.nl">servicecentrum@logius.nl</a></td>
 </tr>
 </tbody></table>
 </section>
-  
-<section id="inleiding"><div class="header-wrapper"><h2 id="x1-inleiding"><bdi class="secno">1. </bdi>Inleiding</h2><a class="self-link" href="#inleiding" aria-label="Permalink for Section 1."></a></div>
+  <section id="inleiding"><div class="header-wrapper"><h2 id="x1-inleiding"><bdi class="secno">1. </bdi>Inleiding</h2><a class="self-link" href="#inleiding" aria-label="Permalink for Section 1."></a></div>
 <p>Dit document beschrijft de uitgangspunten en principes voor identificatie- en
 authenticatieafspraken die gehanteerd worden tussen overheidsorganisaties bij
 gebruik van Digikoppeling.</p>
@@ -402,7 +1006,12 @@ voor overheidsorganisaties, uitmondend in een architectuurprincipe. Hoofdstuk 5
 gaat in op de vraag hoe de (nummer)identiteit vorm krijgt.</p>
 </section><section id="digikoppeling-standaarden"><div class="header-wrapper"><h3 id="x1-3-digikoppeling-standaarden"><bdi class="secno">1.3 </bdi>Digikoppeling standaarden</h3><a class="self-link" href="#digikoppeling-standaarden" aria-label="Permalink for Section 1.3"></a></div>
 <p>Dit document is een onderdeel van de Digikoppeling standaarden:</p>
-<p><figure id="fig-opbouw-documentatie-digikoppeling"><img src="media/DK_Specificatie_structuur.svg" alt="Overzicht van de onderdelen van de Digikoppeling Standaard, de standaard is onderverdeeld in normatieve en ondersteunende onderdelen" title="Opbouw documentatie Digikoppeling"><figcaption>Figuur <bdi class="figno">1</bdi> <span class="fig-title">Opbouw documentatie Digikoppeling</span></figcaption></figure></p>
+<p>
+      </p><figure id="fig-opbouw-documentatie-digikoppeling">
+        <img src="media/DK_Specificatie_structuur.svg" alt="Overzicht van de onderdelen van de Digikoppeling Standaard, de standaard is onderverdeeld in normatieve en ondersteunende onderdelen">
+        <figcaption><a class="self-link" href="#fig-opbouw-documentatie-digikoppeling">Figuur <bdi class="figno">1</bdi></a> <span class="fig-title">Opbouw documentatie Digikoppeling</span></figcaption>
+      </figure>
+    <p></p>
 <details>
     <summary> Tekstalternatief </summary>
 <ul>
@@ -453,7 +1062,7 @@ gaat in op de vraag hoe de (nummer)identiteit vorm krijgt.</p>
 <p>* Normatief document</p>
 <p>† Ondersteunend document</p>
 </details></section></section>
-<section id="probleemstelling"><div class="header-wrapper"><h2 id="x2-probleemstelling"><bdi class="secno">2. </bdi>Probleemstelling</h2><a class="self-link" href="#probleemstelling" aria-label="Permalink for Section 2."></a></div>
+  <section id="probleemstelling"><div class="header-wrapper"><h2 id="x2-probleemstelling"><bdi class="secno">2. </bdi>Probleemstelling</h2><a class="self-link" href="#probleemstelling" aria-label="Permalink for Section 2."></a></div>
 <p>Als een (overheids)organisatie gebruik wil maken van een service van een andere
 organisatie, zal vastgesteld moet worden of dat is toegestaan. In
 e-overheidstermen vertaald: er moet vastgesteld worden of een systeem van een
@@ -496,7 +1105,7 @@ de betrokken partijen.</p>
 aantal discussies dat nu over deze onderwerpen plaatsvinden te verminderen en te
 komen tot standaardoplossingen die optimaal hergebruikt kunnen worden.</p>
 </section>
-<section id="kernbegrippen"><div class="header-wrapper"><h2 id="x3-kernbegrippen"><bdi class="secno">3. </bdi>Kernbegrippen</h2><a class="self-link" href="#kernbegrippen" aria-label="Permalink for Section 3."></a></div>
+  <section id="kernbegrippen"><div class="header-wrapper"><h2 id="x3-kernbegrippen"><bdi class="secno">3. </bdi>Kernbegrippen</h2><a class="self-link" href="#kernbegrippen" aria-label="Permalink for Section 3."></a></div>
 <p>Voor Kernbegrippen- zie ook voetnoten -<sup>2</sup></p>
 <p><sup>2</sup>: Er circuleren vele tekstvarianten voor de definities; de kern is in het
     algemeen gelijk.</p>
@@ -560,7 +1169,7 @@ moet wel onweerlegbaar worden vastgelegd welke medewerker het betrof'
 eisen vanuit de behoefte aan autorisatie en de noodzakelijke vastlegging voor
 bewijs achteraf kunnen dus verschillen.</p>
 </section></section>
-<section id="gewenst-niveau-van-identiteit"><div class="header-wrapper"><h2 id="x4-gewenst-niveau-van-identiteit"><bdi class="secno">4. </bdi>Gewenst niveau van identiteit</h2><a class="self-link" href="#gewenst-niveau-van-identiteit" aria-label="Permalink for Section 4."></a></div>
+  <section id="gewenst-niveau-van-identiteit"><div class="header-wrapper"><h2 id="x4-gewenst-niveau-van-identiteit"><bdi class="secno">4. </bdi>Gewenst niveau van identiteit</h2><a class="self-link" href="#gewenst-niveau-van-identiteit" aria-label="Permalink for Section 4."></a></div>
 <p>Het gewenste niveau van de identiteit wordt in dit hoofdstuk eerst bepaald aan
 de hand van de eisen vanuit autorisatie, en daarna vanuit vastlegging.</p>
 <section id="autorisatie-0"><div class="header-wrapper"><h3 id="x4-1-autorisatie"><bdi class="secno">4.1 </bdi>Autorisatie</h3><a class="self-link" href="#autorisatie-0" aria-label="Permalink for Section 4.1"></a></div>
@@ -616,7 +1225,7 @@ interne autorisaties (met betrekking tot medewerkers, afdelingen, taken
 enzovoort), bijbehorende maatregelen moeten treffen en daar controleerbaar
 verantwoording over moeten afleggen.</p>
 <p>Alle overheidsorganisaties hebben al een dergelijke verplichting in het kader
-van persoonsgegevens, in relatie tot de Wet Bescherming Persoonsgegevens (WBP).</p>
+van persoonsgegevens, in relatie tot de Algemene Verordening Gegevensbescherming (AVG).</p>
 <p>Een belangrijk deel van de verantwoordelijkheid voor informatiebeveiliging komt
 te liggen bij de afnemerorganisatie. Die dient ervoor zorg te dragen, dat
 servicerequests alleen kunnen worden gedaan door daartoe bevoegde medewerkers en
@@ -770,7 +1379,7 @@ bewerkerovereenkomst<sup>8</sup>) zijn.</p>
 beschouwd wordt en wanneer als een puur logistiek koppelpunt, moeten nog worden
 aangescherpt.</p>
 </section></section></section>
-<section id="identiteit-en-nummer"><div class="header-wrapper"><h2 id="x5-identiteit-en-nummer"><bdi class="secno">5. </bdi>Identiteit en nummer</h2><a class="self-link" href="#identiteit-en-nummer" aria-label="Permalink for Section 5."></a></div>
+  <section id="identiteit-en-nummer"><div class="header-wrapper"><h2 id="x5-identiteit-en-nummer"><bdi class="secno">5. </bdi>Identiteit en nummer</h2><a class="self-link" href="#identiteit-en-nummer" aria-label="Permalink for Section 5."></a></div>
 <p>In hoofdstuk 4 beschreven we, dat zowel de autorisatie tot afnemen van een
 service als de vastlegging ervan plaats vindt op basis van de identiteit van de
 zelfstandig bevoegde afnemerorganisatie.</p>
@@ -780,9 +1389,7 @@ identificatienummer is gewenst voor deze overheidsorganisaties, bij voorkeur
 onderdeel van een authentieke registratie, logischerwijs het Handelsregister
 (HR).</p>
 <p>Dat nummer van de hier bedoelde zelfstandig bevoegde overheidsorganisaties wordt
-hierna aangeduid onder de naam 'Organisatie Identificatie Nummer' OIN.<sup>9</sup></p>
-<p><sup>9</sup>: De term BIN wordt hier bewust niet gebruikt, omdat die een veel bredere
-    lading heeft.</p>
+hierna aangeduid onder de naam 'Organisatie Identificatie Nummer' OIN.</p>
 <p>Idealiter zou dat OIN overeenkomen met een nummer uit het HR. Daarbij rijst de
 vraag: 'Komen alle organisaties die we willen identificeren met een OIN wel voor
 in het HR?'.</p>
@@ -797,7 +1404,7 @@ niveaus:</p>
   op Digikoppeling te gebruiken.</p>
 </li>
 <li><p>Het niveau onderneming/maatschappelijke activiteit met als
-  identificatienummer het KvKnummer. Aangegeven is, dat dat nummer naar alle
+  identificatienummer het KvK-nummer. Aangegeven is, dat dat nummer naar alle
   waarschijnlijkheid voor de overheid als OIN (dus op Digikoppeling) niet
   geschikt is. Voor bedrijven en instellingen is het KvK nummer wel geschikt.</p>
 </li>
@@ -809,12 +1416,12 @@ niveaus:</p>
 <p>Volgens HR is 'rechtspersoon' met een Fi-nummer een criterium voor een op te
 nemen organisatie. Maar: niet alle ZBO’s bijvoorbeeld zijn een rechtspersoon.
 Ander voorbeeld is MijnOverheid. MijnOverheid is door middel van het besluit
-MijnOverheid gerechtigd (heeft de bevoegdheid gekregen) om GBA services af te
+MijnOverheid gerechtigd (heeft de bevoegdheid gekregen) om BRP-services af te
 nemen en wordt daarmee dus onderkend als een zelfstandige 'organisatie', die
-door de GBA geautoriseerd moet kunnen worden. Komt MijnOverheid dan in het HR?
+door de BRP geautoriseerd moet kunnen worden. Komt MijnOverheid dan in het HR?
 En gebeurt dat dan als rechtspersoon of bijvoorbeeld als vestiging (bijvoorbeeld
 van BZK)?</p>
-<p>Organisaties' die services aanbieden of afnemen, worden niet in het HR
+<p>Organisaties die services aanbieden of afnemen, worden niet in het HR
 opgenomen.</p>
 <p>Gebruik van het RSIN- ten behoeve van identificatie op Digikoppeling benadert de
 gewenste situatie het meest, maar dekt de behoefte van OIN niet volledig.
@@ -869,7 +1476,7 @@ van hierboven gestelde eisen kunnen doen, zoals buitenlandse partijen of
 organisaties uit het onderwijs. In de Digikoppeling Voorwaarden worden de
 voorwaarden voor uitgifte en gebruik van het OIN exact beschreven.</p>
 </section></section>
-<section id="bijlage-1-nummersystematiek-oin-en-hrn"><div class="header-wrapper"><h2 id="x6-bijlage-1-nummersystematiek-oin-en-hrn"><bdi class="secno">6. </bdi>Bijlage 1: Nummersystematiek OIN en HRN</h2><a class="self-link" href="#bijlage-1-nummersystematiek-oin-en-hrn" aria-label="Permalink for Section 6."></a></div>
+  <section id="bijlage-1-nummersystematiek-oin-en-hrn"><div class="header-wrapper"><h2 id="x6-bijlage-1-nummersystematiek-oin-en-hrn"><bdi class="secno">6. </bdi>Bijlage 1: Nummersystematiek OIN en HRN</h2><a class="self-link" href="#bijlage-1-nummersystematiek-oin-en-hrn" aria-label="Permalink for Section 6."></a></div>
 <section id="oin-formaat-als-thans-in-gebruik-voor-overheids-organisaties"><div class="header-wrapper"><h3 id="x6-1-oin-formaat-als-thans-in-gebruik-voor-overheids-organisaties"><bdi class="secno">6.1 </bdi>OIN formaat, als thans in gebruik voor (Overheids)organisaties</h3><a class="self-link" href="#oin-formaat-als-thans-in-gebruik-voor-overheids-organisaties" aria-label="Permalink for Section 6.1"></a></div>
 <p>Het basisformaat van het OIN - Organisatie Identificatie Nummer- is:</p>
 <blockquote>
@@ -1005,32 +1612,15 @@ gehele nummer geldt dus als OIN.</p>
 <p>In de HRN-variant worden de nummers vastgesteld door de TSP, op basis van het
 door de aanvrager opgegeven KvK-nummer, dat door de TSP wordt gecontroleerd.</p>
 </section></section>
-  
-    
-    <section id="conformance"><div class="header-wrapper"><h2 id="x7-conformiteit"><bdi class="secno">7. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 7."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p>
-      
-    </section>
-  
-    <section id="tof">
-      
-    <div class="header-wrapper"><h2 id="x8-lijst-met-figuren"><bdi class="secno">8. </bdi>Lijst met figuren</h2><a class="self-link" href="#tof" aria-label="Permalink for Section 8."></a></div><ul class="tof">
+  <section id="conformance"><div class="header-wrapper"><h2 id="x7-conformiteit"><bdi class="secno">7. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 7."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p>
+  </section>
+  <section id="tof">
+  <div class="header-wrapper"><h2 id="x8-lijst-met-figuren"><bdi class="secno">8. </bdi>Lijst met figuren</h2><a class="self-link" href="#tof" aria-label="Permalink for Section 8."></a></div><ul class="tof">
         <li class="tofline">
-    <a class="tocxref" href="#fig-opbouw-documentatie-digikoppeling">Figuur <bdi class="figno">1</bdi> <span class="fig-title">Opbouw documentatie Digikoppeling</span></a>
+    <a class="tocxref" href="#fig-opbouw-documentatie-digikoppeling"><span class="self-link">Figuur <bdi class="figno">1</bdi></span> <span class="fig-title">Opbouw documentatie Digikoppeling</span></a>
   </li>
       </ul></section>
-  
-    
-      
-    
-  
-    
-      
-    
-  
-      
-    
-
-
+ 
 
 <p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
@@ -1256,4 +1846,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
+})()</script><div class="sidelabel" style="background-color: #154273;">Logius Standaard - Vastgestelde versie</div><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
