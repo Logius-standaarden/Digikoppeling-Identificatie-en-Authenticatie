@@ -61,19 +61,17 @@ Voor overige organisaties is er nu in het handelsregister geen identificatie.
 
 Het beleid voor de utgifte van een OIN wordt gebaseerd op het bovenstaande:
 
-- ofwel het RSIN voor de grote groep organisaties waarvoor dat RSINr bestaat
-    en gebruikt kan worden.
-- ofwel een nieuw nummer voor de overige organisaties. Dat nieuwe nummer wordt
-    indien mogelijk gebaseerd op een KvK nummer.
+- ofwel een nieuw nummer op basis van het Handelsregsiter. Het nieuwe nummer wordt
+    wordt dus gebaseerd op het KvK nummer van de organisatie.
+- ofwel het RSIN voor organisaties die een RSIN hebben maar geen KvK nummer.
 - ofwel het OIN wordt uitgereikt door Logius als beheerder van Digikoppeling
      wanneer noch een RSIN, noch een KvK nummer beschikbaar is.
 
 Verder:
 
-- Wanneer later organisaties uit de tweede of derde categorie (dus zonder
-    bruikbaar Fi-nummer) alsnog opgenomen worden in het handelsregister,
-    wordt het OIN daarmee in overeenstemming gebracht. De inhoud van het
-    handelsregister blijft leidend.
+- Een OIN van een organisatie blijft geldig, ook wanneer op grond van voornoemde
+  criteria het OIN op een ander nummer gebaseerd zou worden. Bijvoorbeeld, wanneer
+  een overheid een OIN nummer heeft op basis van het RSIN en later een KvK nummer krijgt blijft het bestaande OIN geldig. 
 
 Dat OIN wordt opgenomen in het PKIoverheid certificaat. Omdat PKIoverheid
 certificaten niet alleen door overheidsorganisaties gebruikt worden voor
