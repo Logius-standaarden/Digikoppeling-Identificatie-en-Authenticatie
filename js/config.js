@@ -26,6 +26,6 @@ var respecConfig = {
   publishDate: "2023-06-15",
   publishVersion: "1.4.3",
   shortName: "idauth",
-  specStatus: "DEF",
+  specStatus: "WV",
   specType: "ST"
 };
