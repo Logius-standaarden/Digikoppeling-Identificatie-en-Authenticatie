@@ -59,7 +59,7 @@ Voor overige organisaties is er nu in het handelsregister geen identificatie.
 Het beleid voor de uitgifte van een OIN wordt gebaseerd op het bovenstaande:
 
 - ofwel een nieuw nummer op basis van het Handelsregister. Het nieuwe nummer wordt
-    wordt dus gebaseerd op het KvK nummer van de organisatie.
+    dus gebaseerd op het KvK nummer van de organisatie.
 - ofwel het RSIN voor organisaties die een RSIN hebben maar geen KvK nummer.
 - ofwel het OIN wordt uitgereikt door Logius als beheerder van Digikoppeling
      wanneer noch een RSIN, noch een KvK nummer beschikbaar is.
