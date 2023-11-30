@@ -18,7 +18,7 @@ hierna aangeduid onder de naam 'Organisatie Identificatie Nummer' OIN.<sup>9</su
 
 Bij voorkeur maken we gebruik van een OIN op basis van het nummer uit het
 handelsregister (HR). Daarbij rijst de vraag: 'Komen alle organisaties die we willen
-identificeren met een OIN wel voorin het handelsregister?'.
+identificeren met een OIN wel voor in het handelsregister?'.
 
 De inhoud van het handelsregister is door de Wet op het Handelsregister
 uitgebreid met rechtspersonen met een publieke taak. Het HR onderkent in
@@ -48,7 +48,7 @@ door de GBA geautoriseerd moet kunnen worden. Komt MijnOverheid dan in het HR?
 En gebeurt dat dan als rechtspersoon of bijvoorbeeld als vestiging (bijvoorbeeld
 van BZK)?
 
-Organisaties' die services aanbieden of afnemen, worden niet in het handelsregister
+Organisaties die services aanbieden of afnemen, worden niet in het handelsregister
 opgenomen.
 
 Gebruik van het RSIN- ten behoeve van identificatie op Digikoppeling biedt voor
@@ -59,9 +59,9 @@ Voor overige organisaties is er nu in het handelsregister geen identificatie.
 
 ## OIN beleid
 
-Het beleid voor de utgifte van een OIN wordt gebaseerd op het bovenstaande:
+Het beleid voor de uitgifte van een OIN wordt gebaseerd op het bovenstaande:
 
-- ofwel een nieuw nummer op basis van het Handelsregsiter. Het nieuwe nummer wordt
+- ofwel een nieuw nummer op basis van het Handelsregister. Het nieuwe nummer wordt
     wordt dus gebaseerd op het KvK nummer van de organisatie.
 - ofwel het RSIN voor organisaties die een RSIN hebben maar geen KvK nummer.
 - ofwel het OIN wordt uitgereikt door Logius als beheerder van Digikoppeling
@@ -94,7 +94,7 @@ het OIN is verduidelijkt en op sommige punten is verruimd. Zo kunnen
 overheidsorganisaties (formeel organisaties met Publiekrechtelijke
 Rechtspersoonlijkheid) eenvoudig een subOIN aanvragen voor
 
-- samenwerkingverbanden waar ze zelf deel aan nemen,
+- samenwerkingsverbanden waar ze zelf deel aan nemen,
 
 - eigen organisatieonderdelen en
 
