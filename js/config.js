@@ -20,12 +20,12 @@ var respecConfig = {
       }
     ],
   github: "https://github.com/Logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie",
-  previousPublishDate: "2022-04-11",
-  previousPublishVersion: "1.4.2",
+  previousPublishDate: "2023-06-15",
+  previousPublishVersion: "1.4.3",
   pubDomain: "dk",
-  publishDate: "2023-06-15",
-  publishVersion: "1.4.3",
+  publishDate: "2024-09-19",
+  publishVersion: "",
   shortName: "idauth",
-  specStatus: "VV",
+  specStatus: "CV",
   specType: "ST"
 };
