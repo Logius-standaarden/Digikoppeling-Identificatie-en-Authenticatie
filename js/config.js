@@ -26,6 +26,6 @@ var respecConfig = {
   //publishDate: "2024-09-19",
   publishVersion: "",
   shortName: "idauth",
-  specStatus: "VV",
+  specStatus: "DEF",
   specType: "ST"
 };
