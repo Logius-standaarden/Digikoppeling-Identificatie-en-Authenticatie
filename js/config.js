@@ -23,9 +23,9 @@ var respecConfig = {
   previousPublishDate: "2023-06-15",
   previousPublishVersion: "1.4.3",
   pubDomain: "dk",
-  publishDate: "2024-09-19",
+  //publishDate: "2024-09-19",
   publishVersion: "",
   shortName: "idauth",
-  specStatus: "CV",
+  specStatus: "VV",
   specType: "ST"
 };
