@@ -7,3 +7,4 @@
 | 04/04/2016 | 1.3    | Logius Stelseldiensten | Bijlage WBP verwijderd, Bijlage OIN en HRN toegevoegd, oude tekst geactualiseerd  |
 | 01/10/2017 | 1.4    | Logius                 | OIN tekst geactualiseerd                                                          |
 | 11/04/2022 | 1.4.2  | Logius                 | Vermelding REST-API koppelvlak                                                    |
+| 15/05/2025 | 1.5    | Logius                 | OIN baseren op KVK aanpassing in lijn met OIN Beleid                              |
