@@ -13,13 +13,13 @@ onderdeel van een authentieke registratie, logischerwijs het Handelsregister
 Dat nummer van de hier bedoelde zelfstandig bevoegde overheidsorganisaties wordt
 hierna aangeduid onder de naam 'Organisatie Identificatie Nummer' OIN.
 
-Idealiter zou dat OIN overeenkomen met een nummer uit het HR. Daarbij rijst de
-vraag: 'Komen alle organisaties die we willen identificeren met een OIN wel voor
-in het HR?'.
+Bij voorkeur maken we gebruik van een OIN op basis van het nummer uit het
+handelsregister (HR). Daarbij rijst de vraag: 'Komen alle organisaties die we willen
+identificeren met een OIN wel voor in het handelsregister?'.
 
-De inhoud van het HR is door de Wet op het Handelsregister uitgebreid met
-rechtspersonen met een publieke taak. Het HR onderkent in de structuur drie
-niveaus:
+De inhoud van het handelsregister is door de Wet op het Handelsregister
+uitgebreid met rechtspersonen met een publieke taak. Het HR onderkent in
+de structuur drie niveaus:
 
 - Het niveau rechtspersoon met als identificatienummer het Rechtspersonen en
     Samenwerkingsverbanden Identificatie Nummer (RSIN). Dit is inhoudelijk
@@ -45,31 +45,30 @@ door de BRP geautoriseerd moet kunnen worden. Komt MijnOverheid dan in het HR?
 En gebeurt dat dan als rechtspersoon of bijvoorbeeld als vestiging (bijvoorbeeld
 van BZK)?
 
-Organisaties die services aanbieden of afnemen, worden niet in het HR
+Organisaties die services aanbieden of afnemen, worden niet in het handelsregister
 opgenomen.
 
-Gebruik van het RSIN- ten behoeve van identificatie op Digikoppeling benadert de
-gewenste situatie het meest, maar dekt de behoefte van OIN niet volledig.
-Vrijwel alle ZBO’s, alle gemeenten, provincies enzovoort zullen op dat niveau
-met RSIN opgenomen worden in het HR. Voor overige organisaties is er nu in het
-HR geen identificatie.
+Gebruik van het RSIN- ten behoeve van identificatie op Digikoppeling biedt voor
+bijna alle relevante organisaties een basis voor een OIN, maar dekt de behoefte
+van OIN niet volledig. Vrijwel alle ZBO’s, alle gemeenten, provincies enzovoort
+zullen op dat niveau met RSIN opgenomen worden in het handelsregister.
+Voor overige organisaties is er nu in het handelsregister geen identificatie.
 
-## Voorstel
+## OIN beleid
 
-Op basis van het voorgaande wordt voorgesteld om voor gebruik op Digikoppeling
-als OIN te hanteren:
+Het beleid voor de uitgifte van een OIN wordt gebaseerd op het bovenstaande:
 
-- ofwel het RSIN voor de grote groep organisaties waarvoor dat RSINr bestaat
-    en gebruikt kan worden.
-
-- ofwel een nieuw nummer voor de overige organisaties. Dat nieuwe nummer wordt
-    uitgereikt door Logius als beheerdervan Digikoppeling.
+- ofwel een nieuw nummer op basis van het Handelsregister. Het nieuwe nummer wordt
+    dus gebaseerd op het KvK nummer van de organisatie.
+- ofwel het RSIN voor organisaties die een RSIN hebben maar geen KvK nummer.
+- ofwel het OIN wordt uitgereikt door Logius als beheerder van Digikoppeling
+     wanneer noch een RSIN, noch een KvK nummer beschikbaar is.
 
 Verder:
 
-- Wanneer later organisaties uit de tweede categorie (dus zonder bruikbaar
-    Fi-nummer) alsnog opgenomen worden in het HR, kan het OIN daarmee in
-    overeenstemming worden gebracht. De inhoud van het HR blijft leidend.
+- Een OIN van een organisatie blijft geldig, ook wanneer op grond van voornoemde
+  criteria het OIN op een ander nummer gebaseerd zou worden. Bijvoorbeeld, wanneer
+  een overheid een OIN nummer heeft op basis van het RSIN en later een KvK nummer krijgt blijft het bestaande OIN geldig. 
 
 Dat OIN wordt opgenomen in het PKIoverheid certificaat. Omdat PKIoverheid
 certificaten niet alleen door overheidsorganisaties gebruikt worden voor
@@ -92,7 +91,7 @@ het OIN is verduidelijkt en op sommige punten is verruimd. Zo kunnen
 overheidsorganisaties (formeel organisaties met Publiekrechtelijke
 Rechtspersoonlijkheid) eenvoudig een subOIN aanvragen voor
 
-- samenwerkingverbanden waar ze zelf deel aan nemen,
+- samenwerkingsverbanden waar ze zelf deel aan nemen,
 
 - eigen organisatieonderdelen en
 
@@ -103,4 +102,3 @@ gemaakt hoe en wanneer organisaties een OIN kunnen krijgen als ze niet aan een
 van hierboven gestelde eisen kunnen doen, zoals buitenlandse partijen of
 organisaties uit het onderwijs. In de Digikoppeling Voorwaarden worden de
 voorwaarden voor uitgifte en gebruik van het OIN exact beschreven.
-
