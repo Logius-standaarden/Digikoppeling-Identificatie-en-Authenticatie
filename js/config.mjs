@@ -1,10 +1,6 @@
 import { loadRespecWithConfiguration } from "https://logius-standaarden.github.io/publicatie/respec/organisation-config.mjs";
 
 loadRespecWithConfiguration({
-  alternateFormats: [ { 
-        "label" : "pdf",
-        "uri" : "Digikoppeling-Identificatie-en-Authenticatie.pdf"
-      } ],
   authors: [ { 
         "name" : "Pieter Hering",
         "url" : "https://logius.nl/standaarden"
