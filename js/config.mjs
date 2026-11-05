@@ -25,6 +25,6 @@ loadRespecWithConfiguration({
   publishDate: "2025-05-15",
   publishVersion: "1.5.0",
   shortName: "idauth",
-  specStatus: "DEF",
+  specStatus: "WV",
   specType: "ST"
 });
